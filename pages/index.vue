@@ -1,73 +1,66 @@
 <template>
-  <div class="container">
-    <div>
+  <main>
+    <div
+      class="splash-screen"
+      tabindex="0"
+      @click="isHidden = false"
+      @keyup="isHidden = false"
+      @keyup.esc="isHidden = true"
+    >
       <Logo />
       <h1 class="title">
-        Bonfire & Brawls -
+        Press any key to continue...
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
     </div>
-  </div>
+    <MainMenu
+      v-if="!isHidden"
+      @close="isHidden = true"
+    />
+  </main>
 </template>
 
 <script>
-export default {}
+import Logo from '~/components/Logo.vue'
+import MainMenu from '~/components/MainMenu.vue'
+
+export default {
+  components: {
+    Logo,
+    MainMenu
+  },
+  data() {
+    return {
+      isHidden: true
+    }
+  }
+}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
+.splash-screen {
+  z-index: 0;
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
   text-align: center;
+  background: url('~assets/images/splash-screen.gif') no-repeat center black;
+  background-size: auto 100%;
+  outline: none;
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+  font-size: 2.4rem;
+  color: white;
+  animation: blink 1s steps(5, start) infinite;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
 }
 </style>
