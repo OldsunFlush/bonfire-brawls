@@ -2,44 +2,52 @@
   <div class="MainMenu">
     <div class="container">
       <h2>Main menu</h2>
-      <input
-        id="save-name"
-        v-model="saveName"
-        class="Input--SaveName"
-        name="save-name"
-        type="text"
-      >
-      <button type="button" class="Button--Save" @click="saveState()">
-        Save
-      </button>
-      <ul class="SaveList">
-        <li
-          v-for="(savedGame, index) in savedGames"
-          :key="index"
-          class="SaveList--Item"
+      <div id="newgame">
+        <button type="button" class="Button--Save" @click="$emit('launch')">
+          New game
+        </button>
+      </div>
+      <div id="loadgame">
+        <input
+          id="save-name"
+          v-model="saveName"
+          class="Input--SaveName"
+          name="save-name"
+          type="text"
         >
-          <span class="SaveList--Item-Index">Save {{ index }}</span>
-          <button type="button" class="SaveList--Item-Delete" @click="deleteState()">
-            Delete
-          </button>
-          <div>
-            <h3 class="SaveList--Item-Name">
-              {{ savedGame.name }}
-            </h3>
-            <span class="SaveList--Item-Date">
-              {{ savedGame.date }}
-            </span>
-          </div>
-        </li>
-      </ul>
-      <button type="button" @click="$emit('close')">
-        Back
-      </button>
-      <button type="button" @click="loadState()">
-        Load
-      </button>
-      <span>Saved!</span>
-      <span>Loaded</span>
+        <button type="button" class="Button--Save" @click="saveState()">
+          Save
+        </button>
+        <ul class="SaveList">
+          <li
+            v-for="(savedGame, index) in savedGames"
+            :key="index"
+            class="SaveList--Item"
+          >
+            <span class="SaveList--Item-Index">Save {{ index }}</span>
+            <button type="button" class="SaveList--Item-Delete" @click="deleteState()">
+              Delete
+            </button>
+            <div>
+              <h3 class="SaveList--Item-Name">
+                {{ savedGame.name }}
+              </h3>
+              <span class="SaveList--Item-Date">
+                {{ savedGame.date }}
+              </span>
+            </div>
+          </li>
+        </ul>
+        <button type="button" @click="$emit('close')">
+          Back
+        </button>
+        <button type="button" @click="loadState()">
+          Load
+        </button>
+        <span>Saved!</span>
+        <span>Loaded</span>
+      </div>
+      
     </div>
   </div>
 </template>

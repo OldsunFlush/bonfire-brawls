@@ -1,8 +1,11 @@
-
 export default {
-  mode: 'universal',
+  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
+  ssr: false,
+
+  // Auto import components (https://go.nuxtjs.dev/config-components)
+  components: true,
   /*
-  ** Headers of the page
+  ** Headers of the pagecd b
   */
   head: {
     title: 'Bonfire Brawls',
@@ -29,6 +32,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/vue-threejs.js', ssr: false },
     { src: '~/plugins/persisted-state.js', ssr: false }
   ],
   /*

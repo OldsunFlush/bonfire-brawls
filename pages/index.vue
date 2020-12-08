@@ -1,11 +1,11 @@
 <template>
   <main>
-    <div
+    <div v-if="pageToShow == 'splash'"
       class="splash-screen"
       tabindex="0"
-      @click="isHidden = false"
-      @keyup="isHidden = false"
-      @keyup.esc="isHidden = true"
+      @click="pageToShow = 'menu'"
+      @keyup="pageToShow = 'menu'"
+      @keyup.esc="pageToShow = 'menu'"
     >
       <Logo />
       <h1 class="title">
@@ -13,26 +13,36 @@
       </h1>
     </div>
     <MainMenu
-      v-if="!isHidden"
-      @close="isHidden = true"
+      v-if="pageToShow == 'menu'"
+      @launch="pageToShow = 'characters'"
+      @close="pageToShow = 'splash'"
     />
+    <CharacterSelect  v-if="pageToShow == 'characters'" @close="pageToShow = 'tavern'"/>
+    <Tavern v-if="pageToShow == 'tavern'" @close="pageToShow = 'menu'"/>
   </main>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
 import MainMenu from '~/components/MainMenu.vue'
+import CharacterSelect from '~/components/CharacterSelection/CharacterSelect.vue'
+import Tavern from '~/components/Tavern/Tavern.vue'
 
 export default {
   components: {
     Logo,
-    MainMenu
+    MainMenu,
+    CharacterSelect,
+    Tavern
   },
   data() {
     return {
-      isHidden: true
+      pageToShow: 'splash'
     }
-  }
+  },
+  methods: {
+  
+  },
 }
 </script>
 
