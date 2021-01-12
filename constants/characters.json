@@ -8,8 +8,8 @@
             "stamina": 3,
             "strength": 1
         },
-        "model": "/models/characters/assassin.obj",
-        "material": "/models/characters/assassin.mtl"
+        "model": "assassin.obj",
+        "material": "assassin.mtl"
     },
     "1": {
         "avatar": "/avatars/avatar_knight.png",
@@ -20,8 +20,8 @@
             "stamina": 1,
             "strength": 5
         },
-        "model": "/models/characters/knight.obj",
-        "material": "/models/characters/knight.mtl"
+        "model": "knight.obj",
+        "material": "knight.mtl"
     },
     "2": {
         "avatar": "/avatars/avatar_barbarian.png",
@@ -32,7 +32,7 @@
             "stamina": 5,
             "strength": 3
         },
-        "model": "/models/characters/barbarian.obj",
-        "material": "/models/characters/barbarian.mtl"
+        "model": "barbarian.obj",
+        "material": "barbarian.mtl"
     }
 }

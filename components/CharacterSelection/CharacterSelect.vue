@@ -34,18 +34,7 @@
           return {
             characters: Characters,
             focusedCharacter: null,
-            selectedCharacter: {
-        "avatar": "/avatars/avatar_assassin.png",
-        "name": "Deez Nuts",
-        "description": "Assassin",
-        "stats": {
-            "dexterity": 5,
-            "stamina": 3,
-            "strength": 1
-        },
-        "model": "/models/characters/assassin.obj",
-        "material": "/models/characters/assassin.mtl"
-    },
+            selectedCharacter: Characters[0],
             selectionCursor: 0
           }
         },
