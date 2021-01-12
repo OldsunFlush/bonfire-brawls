@@ -1,0 +1,38 @@
+{
+    "0": {
+        "avatar": "/avatars/avatar_assassin.png",
+        "name": "Deez Nuts",
+        "description": "Assassin",
+        "stats": {
+            "dexterity": 5,
+            "stamina": 3,
+            "strength": 1
+        },
+        "model": "assassin.obj",
+        "material": "assassin.mtl"
+    },
+    "1": {
+        "avatar": "/avatars/avatar_knight.png",
+        "name": "Biggus Dickus",
+        "description": "Knight",
+        "stats": {
+            "dexterity": 3,
+            "stamina": 1,
+            "strength": 5
+        },
+        "model": "knight.obj",
+        "material": "knight.mtl"
+    },
+    "2": {
+        "avatar": "/avatars/avatar_barbarian.png",
+        "name": "Ben Dover",
+        "description": "Barbarian",
+        "stats": {
+            "dexterity": 1,
+            "stamina": 5,
+            "strength": 3
+        },
+        "model": "barbarian.obj",
+        "material": "barbarian.mtl"
+    }
+}
