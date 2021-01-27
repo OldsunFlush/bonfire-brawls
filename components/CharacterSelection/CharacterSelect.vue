@@ -13,7 +13,7 @@
           @click="focus(character, index)"
           />
       </div>
-      <preview :selected-character="selectedCharacter" @go="$emit('go')"/>
+      <preview :selected-character="selectedCharacter" :key="i" @go="$emit('go')"/>
     </div>
   </div>
 </template>
@@ -35,13 +35,15 @@
             characters: Characters,
             focusedCharacter: null,
             selectedCharacter: Characters[0],
-            selectionCursor: 0
+            selectionCursor: 0,
+            i: 0
           }
         },
         methods: {
           focus(character, index) {
             this.selectionCursor = index
             this.selectedCharacter = character
+            this.i++;
           },
           
           handleKeyboard(e) {

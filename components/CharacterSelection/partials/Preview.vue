@@ -8,8 +8,8 @@
         </orbit-controls>
         <light
           :hex="0xefefff"
-          :intensity="2"
-          :position="{ x: 50, y: 50, z: 50 }"
+          :intensity="1"
+          :position="{ x: 5, y: 5, z: 5 }"
         >
         </light>
         <light
