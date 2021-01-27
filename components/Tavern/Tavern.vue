@@ -1,15 +1,17 @@
 <template>
   <div class="Tavern">
     <div class="container">
-      <h2>Tarven</h2>
+      <h2>Tavern</h2>
     </div>
   </div>
 </template>
 
 <script>
-    export default {
-        name: 'Tavern'
-    }
+import Rooms from '@/constants/rooms.js';
+
+export default {
+    name: 'Tavern'
+}
 </script>
 
 <style lang="scss" scoped>
