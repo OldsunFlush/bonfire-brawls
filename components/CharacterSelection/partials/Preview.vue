@@ -21,6 +21,7 @@
         <character-model :selected-character="selectedCharacter" />
       </scene>
     </renderer>
+    <button @click="$emit('go')">Lancer</button>
   </div>
 </template>
 

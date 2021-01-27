@@ -17,7 +17,7 @@
       @launch="pageToShow = 'characters'"
       @close="pageToShow = 'splash'"
     />
-    <CharacterSelect  v-if="pageToShow == 'characters'" @close="pageToShow = 'tavern'"/>
+    <CharacterSelect  v-if="pageToShow == 'characters'" @close="pageToShow = 'tavern'" @go="pageToShow = 'tavern'"/>
     <Tavern v-if="pageToShow == 'tavern'" @close="pageToShow = 'menu'"/>
   </main>
 </template>

@@ -13,7 +13,7 @@
           @click="focus(character, index)"
           />
       </div>
-      <preview :selected-character="selectedCharacter" />
+      <preview :selected-character="selectedCharacter" @go="$emit('go')"/>
     </div>
   </div>
 </template>
