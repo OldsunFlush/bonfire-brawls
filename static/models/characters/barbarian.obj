@@ -4,7 +4,7 @@
 o 
 
 # material
-mtllib knight_warrior.mtl
+mtllib barbarian.mtl
 usemtl palette
 
 # normals
