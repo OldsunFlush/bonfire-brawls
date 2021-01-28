@@ -3,9 +3,14 @@ import { random } from 'lodash-es'
 const Rooms = {
   Bathroom: {
     name: 'bathroom',
-    size_x: random(3, 5),
-    size_y: random(3, 5),
-    nb: random(0, 1),
+    size_x: {
+      min: 3,
+      max: 5
+    },
+    size_y: {
+      min: 3,
+      max: 5
+    },
     floor_type: 'wood',
     assets: [
       {
@@ -26,9 +31,14 @@ const Rooms = {
   },
   Bedroom: {
     name: 'bedroom',
-    size_x: random(5, 8),
-    size_y: random(5, 8),
-    nb: random(0, 3),
+    size_x: {
+      min: 5,
+      max: 8
+    },
+    size_y: {
+      min: 5,
+      max: 5
+    },
     floor_type: 'wood',
     assets: [
       {
@@ -56,9 +66,14 @@ const Rooms = {
   },
   Cellar: {
     name: 'cellar',
-    size_x: random(3, 5),
-    size_y: random(3, 5),
-    nb: 1,
+    size_x: {
+      min: 3,
+      max: 5
+    },
+    size_y: {
+      min: 3,
+      max: 5
+    },
     floor_type: 'wood',
     assets: [
       {
@@ -72,9 +87,14 @@ const Rooms = {
   },
   Dormitory: {
     name: 'dormitory',
-    size_x: random(10, 15),
-    size_y: random(10, 15),
-    nb: random(0, 1),
+    size_x:{
+      min: 10,
+      max: 15
+    },
+    size_y: {
+      min: 10,
+      max: 15
+    },
     floor_type: 'wood',
     assets: [
       {
@@ -88,9 +108,14 @@ const Rooms = {
   },
   Kitchen: {
     name: 'kitchen',
-    size_x: random(6, 10),
-    size_y: random(6, 10),
-    nb: 1,
+    size_x: {
+      min: 6,
+      max: 10
+    },
+    size_y: {
+      min: 6,
+      max: 10
+    },
     floor_type: 'stone',
     assets: [
       {
@@ -118,9 +143,14 @@ const Rooms = {
   },
   Mainroom: {
     name: 'mainroom',
-    size_x: random(12, 20),
-    size_y: random(12, 20),
-    nb: 1,
+    size_x: {
+      min: 12,
+      max: 20
+    },
+    size_y: {
+      min: 12,
+      max: 20
+    },
     floor_type: 'wood',
     assets: [
       {
